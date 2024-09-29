@@ -89,7 +89,7 @@ class MemberList extends BaseLive
             }
             $member->image = null;
         }
-        if (($this->change_image || $this->mode = 'create') && $this->image) {
+        if (($this->change_image || $this->mode == 'create') && $this->image) {
             $member->image = $this->image->storeAs('public/photos', $this->image->getClientOriginalName());
         }
         $member->save();
@@ -106,5 +106,6 @@ class MemberList extends BaseLive
 
     public function updatedImage() {
         $this->tmpUrl = null;
+        $this->change_image = true;
     }
 }

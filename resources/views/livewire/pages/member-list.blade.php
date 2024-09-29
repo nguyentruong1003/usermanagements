@@ -105,29 +105,29 @@
               </div>
               <div class="col mb-0">
                 <label for="phoneWithTitle" class="form-label">SĐT</label>
-                <input name="phone" wire:ignore wire:model.lazy="phone" type="number" id="phoneWithTitle" class="form-control">
+                <input name="phone" wire:ignore wire:model.lazy="phone" type="number" id="phoneWithTitle" class="form-control" placeholder="Enter phone">
               </div>
             </div>
             <div class="row g-2">
               <div class="col mb-0">
                 <label for="levelWithTitle" class="form-label">Trình độ</label>
-                <input name="level" wire:ignore wire:model.lazy="level" type="text" id="levelWithTitle" class="form-control" placeholder="xxxx@xxx.xx">
+                <input name="level" wire:ignore wire:model.lazy="level" type="text" id="levelWithTitle" class="form-control" placeholder="Enter Level">
               </div>
               <div class="col mb-0">
                 <label for="hobbyWithTitle" class="form-label">Sở thích</label>
-                <input name="hobby" wire:ignore wire:model.lazy="hobby" type="text" id="hobbyWithTitle" class="form-control">
+                <input name="hobby" wire:ignore wire:model.lazy="hobby" type="text" id="hobbyWithTitle" class="form-control" placeholder="Enter Hobby">
               </div>
             </div>
             <div class="row g-2">
               <div class="col mb-0">
                 <label for="addressWithTitle" class="form-label">Địa chỉ</label>
-                <input name="address" wire:ignore wire:model.lazy="address" type="text" id="addressWithTitle" class="form-control" placeholder="Enter Name">
+                <input name="address" wire:ignore wire:model.lazy="address" type="text" id="addressWithTitle" class="form-control" placeholder="Enter Address">
               </div>
             </div>
             <div class="row g-2">
               <div class="col mb-0">
                 <label for="noteWithTitle" class="form-label">Ghi chú</label>
-                <input name="note" wire:ignore wire:model.lazy="note" type="text" id="noteWithTitle" class="form-control" placeholder="Enter Name">
+                <input name="note" wire:ignore wire:model.lazy="note" type="text" id="noteWithTitle" class="form-control" placeholder="Enter Note">
               </div>
             </div>
             <div class="row g-2 mt-1">
