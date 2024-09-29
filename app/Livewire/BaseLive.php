@@ -10,6 +10,7 @@ abstract class BaseLive extends Component
 	use WithPagination;
 
 	public $deleteId;
+    public $updateId;
     public $reset = false;
     public $searchTerm;
     public $mode = 'create';
@@ -21,30 +22,12 @@ abstract class BaseLive extends Component
         return 'livewire.common.pagination._pagination';
     }
 
+    public function resetInputFields() {
+        $this->reset();
+    }
+
     public function setDeleteId($id) {
         $this->deleteId=$id;
     }
-    // public function levelClicked(){
-
-    // }
-    // public function resetSearch(){
-    //     $this->reset = true;
-
-    // }
-    // public function updatingSearchTerm() {
-    //     $this->resetPage();
-    // }
-    // public function updatingSearchCategory() {
-    //     $this->resetPage();
-    // }
-    // public function updatingStore(){
-    //     dd($this->checkEditPermission);
-    // }
-    // public function updatingSetDate() {
-    //     $this->resetPage();
-    // }
-    // public function updatingPerPage() {
-    //     $this->resetPage();
-    // }
 }
 

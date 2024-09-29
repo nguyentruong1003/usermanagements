@@ -1,4 +1,4 @@
-@php
+{{-- @php
 $containerNav = $containerNav ?? 'container-fluid';
 $navbarDetached = ($navbarDetached ?? '');
 
@@ -120,4 +120,4 @@ $navbarDetached = ($navbarDetached ?? '');
     </div>
     @endif
   </nav>
-  <!-- / Navbar -->
+  <!-- / Navbar --> --}}

@@ -18,14 +18,9 @@
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-  <!-- Custom css -->
-  <link rel="stylesheet" href="../../css/style.css">
+  
+  @livewireScripts
+    <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v1.x.x/dist/livewire-sortable.js"></script>
 
   <!-- Include Styles -->
   @include('layouts/sections/styles')
@@ -45,6 +40,7 @@
 
   <!-- Include Scripts -->
   @include('layouts/sections/scripts')
+  @include('components/ui-toast')
 
 </body>
 

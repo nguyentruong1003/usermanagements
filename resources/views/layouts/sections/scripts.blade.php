@@ -16,3 +16,28 @@
 <!-- BEGIN: Page JS-->
 @yield('page-script')
 <!-- END: Page JS-->
+
+<script>
+    window.addEventListener('show-toast', event => {
+        const toastPlacementExample = document.querySelector('.toast-placement-ex'),
+        toastBodyMessage = document.querySelector(".toast-body")
+        toastPlacementBtn = document.querySelector('#showToastPlacement');
+        let selectedType, toastPlacement;
+
+        if (event.detail[0].type == "success") {
+            selectedType = "bg-primary";
+        } else if (event.detail[0].type == "error") {
+            selectedType = "bg-danger";
+        }
+        toastBodyMessage.innerHTML = event.detail[0].message;
+        toastPlacementExample.classList.add(selectedType);
+        DOMTokenList.prototype.add.apply(toastPlacementExample.classList, toastBodyMessage);
+        toastPlacement = new bootstrap.Toast(toastPlacementExample);
+        toastPlacement.show();
+        document.querySelector(".btn-close").click();
+    });
+
+    window.addEventListener('close-modal', event => {
+        $('#close-modal').click();
+    });
+</script>
