@@ -40,4 +40,14 @@
     window.addEventListener('close-modal', event => {
         $('#close-modal').click();
     });
+
+    window.addEventListener('export-data', event => {
+        $('#infoImgModal').modal('show');
+    });
+
+    $('#infoImgModal').on('hidden.bs.modal', function () {
+        const canvas = document.getElementById('member-info-img');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    })
 </script>

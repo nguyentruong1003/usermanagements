@@ -96,6 +96,8 @@ class MemberList extends BaseLive
         $this->reset();
         $this->dispatch('close-modal');
         $this->dispatch('show-toast', ["type" => "success", "message" => __('notification.common.success.update')] );
+        $this->dispatch('export-data');
+        $this->exportImage($member->id);
     }
 
     public function removePath() {
@@ -107,5 +109,11 @@ class MemberList extends BaseLive
     public function updatedImage() {
         $this->tmpUrl = null;
         $this->change_image = true;
+    }
+
+    public function exportImage($id) {
+        $editMember = Member::findOrFail($id);
+        $this->edit($id);
+        $this->dispatch('show-member-info-img', $editMember);
     }
 }
